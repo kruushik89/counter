@@ -1,0 +1,23 @@
+nav {
+    height: 60px;
+    position: fixed;
+    z-index: 1111;
+    background: #fff;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 0 100px;
+    align-items: center;
+    column-gap: 25px;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
+
+nav a{
+    font-size: 20px;
+    color: #282c34;
+    font-weight: 600;
+    text-decoration: none;
+}

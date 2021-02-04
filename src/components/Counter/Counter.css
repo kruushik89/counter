@@ -1,0 +1,22 @@
+.screen_counter {
+    width: 400px;
+    height: 250px;
+    color: #000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.btn_group {
+    justify-content: center;
+    margin-top: 15px;
+    display: flex;
+    column-gap: 15px;
+}
+
+.btn_group button {
+    display: block;
+}
