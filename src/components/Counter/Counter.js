@@ -5,18 +5,23 @@ const Counter = () => {
     const [counter, setCounter] = useState(0);
     const [input, setInput] = useState(0);
 
-    const onIncrement = () => {
-        setCounter(counter + 1);
+    //todo подивись на це
+    const onIncrement = (num) => {
+        setCounter(counter + num);
     }
 
     const onIncrement100 = () => {
         setCounter(counter + 100);
     }
 
-    const onDecrement = () => {
-        if (counter >= 1) {
-            setCounter(counter - 1 < 0 ? 0 : counter -1) ;
-        }
+    const onDecrement = (num) => {
+        // як намене ізбиточний иф
+        // if (counter >= 1) {
+        //     setCounter(counter - 1 < 0 ? 0 : counter -1) ;
+        // }
+
+            setCounter(counter + num < 0 ? 0 : counter + num) ;
+
     }
 
     const onDecrement100 = () => {
@@ -38,13 +43,15 @@ const Counter = () => {
                 {counter}
             </div>
             <div className="btn_group">
-                <button onClick={onIncrement}>Inc</button>
-                <button onClick={onDecrement}>Dec</button>
+                {/*//todo подивись на варікі як можно додати аргументи*/}
+                <button onClick={onIncrement.bind(null,1)}>Inc</button>
+                <button onClick={()=>onDecrement(-1)}>Dec</button>
+
                 <button onClick={onReset}>Reset</button>
                 <button onClick={onIncrement100}>+100</button>
                 <button onClick={onDecrement100}>-100</button>
             </div>
-
+            {/*todo зробити контрольований інпут позбавитись форми*/}
             <form onSubmit={onSubmitCounter}>
                 <input type="number"/>
                 <button type='submit'>Enter</button>
